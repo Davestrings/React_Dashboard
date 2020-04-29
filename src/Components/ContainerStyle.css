@@ -1,0 +1,342 @@
+#contain1{
+    background-color: #f6f6f6;
+}
+#contain2{
+    background-color: #f6f6f6;
+    width: 100%;
+    position: relative;
+}
+#inner-contain{
+    background-color: #ffffff;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    padding-top: 50px ;
+    padding-bottom: 50px;
+    box-shadow: 0px 15px 30px rgba(130, 130, 130, 0.15);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 23% 70%;
+}
+/*---------- Side Bar Toggle Styling----------*/
+.opener{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    left: 5%;
+    bottom: 15%;
+    background-color: #34a853 ;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 3px 6px 10px rgba(130, 130, 130, 0.705);
+    justify-content: space-around;
+    z-index: 250;
+}
+.opener .button{
+    width: 40px;
+    
+}
+/* #left{
+    border: 1px solid red;
+} */
+#left-side{
+    /* border: red; */
+    padding: 20px;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+nav#sidenav.open{
+    transform: translateX(0);
+}
+#sidenav{
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    position: fixed;
+    background-color: #ffffff;
+    height: 100%;
+    top: 0;
+    left:0;
+    width: 70%;
+    max-width: 400px;
+    z-index:300;
+    /* display: none; */
+}
+#sidenav ul{
+    height:100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#sidenav li{
+    margin: 0.6rem;
+    /* border: 1px solid orange; */
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+}
+#sidenav li:hover{
+    background-color: #f6f6f6;
+    color: #009677;
+    border-right: 5px solid #009677;
+}
+#sidenav li.logout:hover{
+    border-right: 5px solid #E78839;
+    color: #E78839;
+}
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    /* display: none; */
+}
+/*---------- Side Bar Toggle Styling end----------*/
+
+@media(max-width:950px){
+    #left-side{
+        display: none;
+    }
+    #inner-contain{
+        grid-template-columns: 100%;
+        justify-items: center;
+        /* position: relative; */
+    }
+    /* #sidenav div{
+        position: absolute; */
+        /* left:-90px; */
+        /* transition:0.3s;
+        background-color: #34a853;
+        height: 50px;
+        width: 150px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    #sidenav div:hover{
+        left:0;
+        background-color: #f6f6f6;
+        color: #213363;
+        border-right: 5px solid #34a853;
+    }
+    #viewSelector1{
+        top:130px;
+    }
+    #viewSelector2{
+        top:190px;
+    }
+    #viewSelector3{
+        top:250px;
+    }
+    #viewSelector4{
+        top:310px;
+    }
+    #logOut2{
+        top:410px;
+    }
+    div#logOut2:hover{
+        border-right: 5px solid #E78839;
+    } */
+}
+@media(min-width:950px){
+    #sidenav div{
+        display: none;
+    }
+    
+}
+@media(min-width:950.5px){
+    .opener{
+        display: none;
+    }
+}
+/* #right{
+    border: 1px solid green;
+} */
+.viewSelector{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+.viewSelector:hover{
+    background-color: #f6f6f6;
+    color: #009677;
+    border-right: 5px solid #009677;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 24px;
+}
+.viewSelector:active{
+    border-right: #009677;
+    color: #009677;
+    background-color: #E8F5F5;
+}
+.viewSelector:focus{
+    border-right: #009677;
+    color: #009677;
+    background-color: #E8F5F5;
+}
+#logOut{
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+#logOut:hover{
+    color: #E78839;
+    background-color: #f6f6f6;
+    border-right: 5px solid #E78839;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 24px;
+}
+
+/*
+====================================================================
+================Style for stats grid view ==========================
+=====================================================================
+*/
+
+#title{
+    padding-left: 15px;
+    color: rgba(99, 120, 174, 0.418);
+    /* font-family: 'Roboto', Sans-serif; */
+}
+.figures{
+    height: 72px;
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #213363;
+}
+
+/*
+---------------------------------------------------------------------------------
+-----------------------------------grid styling for grid view---------------------
+*/
+#box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 50px;
+    padding-left: 15px;
+}
+@media(max-width:1130px){
+    #box-container{
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 150px 150px 180px;
+        row-gap: 70px;
+        column-gap: 50px;
+        padding-left: 15px;
+    }
+    .viewSelector{
+        font-size: 0.70rem;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+@media(max-width:950px){
+    #box-container{
+        padding-left: 30px;
+    }
+    #title{
+        padding-left: 30px;
+    }
+}
+
+.box{
+   background-color: #E8F5F5;
+   border-radius: 7px;
+   box-shadow: 5px 0px 15px rgba(130, 130, 130, 0.15);
+   padding: 15px;
+   font-family: 'Roboto', sans-serif;
+   position: relative;
+}
+
+/*
+------------------Styling for the graph views and positioning the svgs-----------------------
+*/
+#img-box1, #img-box2, #img-box3{
+    height: fit-content;
+}
+.graph{
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+    height: 100px;
+    width: 180px;
+}
+#img1, #img2, #img3, #imgShadow1, #imgShadow2, #imgShadow3, #arrowup1, #arrowup2, #arrowdown{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+#img1, #imgShadow1{
+    position: absolute;
+    bottom: 4%;
+    left: 10%;
+}
+#img2, #imgShadow2{
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+}
+#img3, #imgShadow3{
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+}
+#arrowup1{
+    position: absolute;
+    bottom: 35%;
+    right:6%; 
+}
+#arrowup2{
+    position: absolute;
+    bottom: 35%;
+    right:28%; 
+}
+#arrowdown{
+    position: absolute;
+    bottom: 35%;
+    right:20%; 
+}
+
+@media(max-width:710px){
+    #box-container{
+        display: grid;
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(6,150px);
+        row-gap: 40px;
+    }
+    #box-container{
+        padding-left: 0px;
+    }
+    #title{
+        font-size: 1.3rem;
+        padding-left: 0px;
+    }
+    .figures{
+        height: 50px;
+        font-size: 35px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: #213363;
+    }
+    .divider{
+        height: 30px;
+    }
+    #arrowup1{
+        right:43%;
+    }
+    #arrowup2{
+        right: 55%;
+    }
+    #arrowdown{
+        right: 49%;
+    }
+}
+

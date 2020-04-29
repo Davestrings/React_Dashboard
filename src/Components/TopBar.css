@@ -1,0 +1,29 @@
+@media(min-width:993px){
+    #container-box{
+        /* border: 1px solid red; */
+        position: relative;
+    }
+    #btn-box{
+        /* border: 1px solid green; */
+        position: absolute;
+        right: 20%;
+    
+    }
+}
+@media(max-width:993px){
+    #btn-box{
+        /* border: 1px solid green; */
+        width: 200px;
+        /* display: block; */
+    }
+    #divider{
+        height: 10px;
+        width: 10px;
+    }
+
+}
+#divider{
+    height: 10px;
+    width: 10px;
+}
+
